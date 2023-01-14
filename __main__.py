@@ -8,8 +8,8 @@ def main():
     cls()
     print(f"{title}\n\n" +
            "Difficulty:\n" +
-           "1. Easy\n" +
-           "2. Hard\n")
+           "1. EASY\n" +
+           "2. HARD\n")
     level = 15 if input() == 1 else 17
 
     ready = begin()
