@@ -1,20 +1,9 @@
 from classes import title, Deck, Player
-from functions import begin, cls, display, end_game, replay
+from functions import begin, display, end_game, replay
 
 # -------------------------------------------------------------------------------------------------
 
 def main():
-
-    cls()
-    print(f"{title}\n\n" +
-           "Difficulty:\n" +
-           "1. Easy\n" +
-           "2. Medium\n" +
-           "3. Hard\n")
-    
-    if input().strip() == 1: level = 12
-    elif input().strip() == 2: level = 15
-    else: level = 17
 
     ready = begin()
     game = 0
@@ -57,7 +46,7 @@ def main():
 
             if stand:
                 display(dealer, player, stand, game)             
-                while dealer.hand.value < level:
+                while dealer.hand.value < 17:
                     dealer.hit(deck)
                 
                 ready = end_game(dealer, player, stand, game)
