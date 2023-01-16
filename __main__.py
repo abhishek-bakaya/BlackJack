@@ -8,9 +8,13 @@ def main():
     cls()
     print(f"{title}\n\n" +
            "Difficulty:\n" +
-           "1. EASY\n" +
-           "2. HARD\n")
-    level = 15 if input() == 1 else 17
+           "1. Easy\n" +
+           "2. Medium\n" +
+           "3. Hard\n")
+    
+    if input().strip() == 1: level = 12
+    elif input().strip() == 2: level = 15
+    else: level = 17
 
     ready = begin()
     game = 0
